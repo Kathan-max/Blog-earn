@@ -45,15 +45,46 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 15px;
-	width: min(500px, 80%);
+	padding: 18px;
 	font-size: 1em;
-	margin: 1em;
+	border-left: none;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	margin: 1em 0;
+	width: 100%;
+	outline: none;
 }
 .login-input-block {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
-	width: 100%;
+	flex-direction: row;
+	width: min(500px, 80%);
+}
+.login-input-block > img {
+	width: 24px;
+	height: 24px;
+	/* margin-right: 10px; */
+	border: 1px solid white;
+	padding: 15px;
+	border-right: none;
+	border-radius: 15px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+#login-button {
+	background: linear-gradient(to right, #eead92, #6018dc);
+
+	border: none;
+	border-radius: 15px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 18px;
+	font-size: 1em;
+	width: min(500px, 80%);
+	margin: 1em 0;
+	outline: none;
 }
