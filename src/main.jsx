@@ -1,18 +1,21 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App";
-import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
-import "./styles/globals.css";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { ChainId, ThirdwebProvider} from '@thirdweb-dev/react';
+import { StateContextProvider } from './context';
 
-// This is the chainId your dApp will work on.
-const activeChainId = ChainId.Mainnet;
+import App from './App';
+import './index.css'
 
-const container = document.getElementById("root");
-const root = createRoot(container);
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-  <React.StrictMode>
-    <ThirdwebProvider desiredChainId={activeChainId}>
-      <App />
+    <ThirdwebProvider desiredChainId={ChainId.Goerli}>
+        <Router>
+            <StateContextProvider>
+                <App />
+            </StateContextProvider>
+        </Router>
     </ThirdwebProvider>
-  </React.StrictMode>
-);
+)
